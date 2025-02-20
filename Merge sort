@@ -39,7 +39,7 @@ def mergesort(arr,low,high):
 n=int(input("enter number of elements"))
 arr=[]
 for i in range(n):
-    num=int(input("enter alement"))
+    num=int(input("enter element"))
     arr.append(num)
     
 mergesort(arr,0,n-1)
