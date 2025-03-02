@@ -1,0 +1,26 @@
+
+
+def putzeroinlast(arr):
+    temp=[]
+    for i in range(len(arr)):
+        if arr[i] != 0:
+            temp.append(arr[i])
+            
+    for j in range(len(temp)):
+        arr[j]=temp[j]
+        
+    for k in range(len(temp)+1,n):
+        arr[k]=0
+        
+    return arr
+
+
+
+
+n=int(input("enter number of elements"))
+arr=[]
+for i in range(n):
+    x=int(input("enter elements"))
+    arr.append(x)
+new_arr=putzeroinlast(arr)
+print(new_arr)
