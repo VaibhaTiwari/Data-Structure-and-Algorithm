@@ -1,0 +1,27 @@
+def roteteright(arr,n,k):
+    temp=[0]*k
+    for o in range(n-k,n):
+        temp[o-(n-k)]=arr[o]
+        
+    for j in range(n-k-1,-1,-1):
+        arr[j+k]=arr[j]
+        
+    for l in range(k):
+        arr[l]=temp[l]
+        
+    return arr
+
+
+
+
+
+
+n=int(input("enter number of elements"))
+arr=[]
+for i in range(n):
+    x=int(input("enter elements"))
+    arr.append(x)
+k=int(input("enter value to be shifted"))
+rotated_arr = roteteright(arr, n, k)
+print("arr after shifting k places towards right")
+print(rotated_arr)
